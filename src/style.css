@@ -1,0 +1,129 @@
+/* Sidebar Styles */
+.sidebar {
+    background-color: #1434A4 !important; 
+    color: white; 
+    min-height: 100vh; 
+    padding: 15px;
+}
+
+/* Hover effect for sidebar list items */
+.list-group a:hover {
+    background-color: #0F52BA; 
+    color: white;
+    cursor: pointer;
+}
+
+/* Default styles for list items */
+.list-group-item {
+    color: white; 
+    background-color: #1434A4; 
+    border: none; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Custom background for sections */
+.bg-custom {
+    background-color: #1434A4 !important; /* Custom blue color */
+}
+
+
+/* Brand name styles */
+.brand-name {
+    color: white;
+    font-weight: bold; 
+    font-size: 16px; 
+
+}
+
+/* Button styling for 'Pro' button */
+.btn-warning {
+    padding: 6px 5px; 
+    font-size: 14px;   
+    font-weight: bold; 
+}
+
+/* Increase the icon size inside the Pro button */
+.btn-warning .bi {
+    font-size: 18px; 
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    /* On mobile screens, make the sidebar more compact */
+    .sidebar {
+        width: 60%; 
+        position: absolute;
+        z-index: 999;
+        left: -100%;  
+        transition: left 0.3s ease; /* Smooth transition for showing sidebar */
+    }
+
+    .sidebar.show {
+        left: 0;  
+    }
+
+    /* Make the brand name and button more compact */
+    .brand-name {
+        font-size: 18px;  
+    }
+
+    .sidebar .btn {
+        font-size: 12px; 
+        padding: 5px 15px; 
+    }
+
+    /* Adjust icon sizes on smaller screens */
+    .bi {
+        font-size: 18px;  
+    }
+
+    /* Ensure the sidebar toggle button is visible on mobile */
+    .toggle-sidebar {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+}
+
+/* Add space between the sidebar items */
+.list-group-item {
+    padding: 12px 20px;
+}
+
+/* Optional: Make sidebar items and icons larger on desktop */
+@media (min-width: 768px) {
+    .bi {
+        font-size: 24px;  
+    }
+
+    .list-group-item {
+        font-size: 16px;  
+    }
+}
+
+/* Optional: Custom styles for sidebar toggle button */
+.toggle-sidebar {
+    display: none;
+    font-size: 20px;
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* When sidebar is open on mobile, style the toggle button */
+.sidebar.show + .toggle-sidebar {
+    background-color: #003d87;  
+}
+
+/* Ensure the brand and button are aligned */
+.m-2.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
